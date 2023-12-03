@@ -11,7 +11,7 @@ const UserList = ({user, setCardId}) => {
   }
   
   return(
-    <div className="p-2 mb-2 border  rounded-3 d-flex align-items-center gap-4">
+    <div className="p-2 mx-3 mb-2 border  rounded-3 d-flex align-items-center gap-4">
       {
         imgError ? <Skeleton height={80} width={80} circle /> :
         <img className="img-sizing rounded-circle" onError={handleImgErr} src={avatar} alt="" />

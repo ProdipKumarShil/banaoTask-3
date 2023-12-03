@@ -41,11 +41,13 @@ function App() {
     <div className="container">
       <div className="row">
         <div className="col-8 ">
-          <h1 className="text-center ">USERS LIST</h1>
+          <p className="text-center bg-success mx-2 p-2 display-6 mb-4">USERS LIST</p>
           {/* mapping the users */}
           {loading && (
-            <div className="spinner-border" role="status">
-              <span className="visually-hidden">Loading...</span>
+            <div className="d-flex justify-content-center mt-4">
+              <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
             </div>
           )}
           {users.map((user, index) => (
@@ -53,7 +55,7 @@ function App() {
           ))}
         </div>
         <div className="col-4 ">
-          <h1 className="text-center ">USER DETAILS</h1>
+          <h1 className="text-center bg-success mx-2 p-2 display-6 mb-4">USER DETAILS</h1>
           {cardId ? <UserDetails card={card} /> : <Loading />}
         </div>
       </div>
@@ -65,7 +67,7 @@ export default App;
 
 const Loading = () => {
   return (
-    <div style={{ color: "#acacac" }} className="border p-3 rounded-3">
+    <div style={{ color: "#acacac" }} className="border p-3 rounded-3 mx-3">
       <p className="display-6 text-center ">User Not Found</p>
       <p className="text-center">
         or <br /> select one to more details
