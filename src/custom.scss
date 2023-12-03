@@ -1,6 +1,6 @@
 $primary: #F38181;
 $secondary: #FCE38A;
-$success: #EAFFD0;
+$success: #e81cff;
 $warning: #95E1D3; // background color
 
 .img-sizing {
@@ -12,6 +12,26 @@ p{
 }
 .text-24{
   font-size: 24px;
+}
+
+.bg-img-height{
+  height: 200px;
+}
+.w-screen{
+  width: 800px;
+}
+.img-position{
+  top: 70px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-16{
+  font-size: 12px;
+}
+.light-bg{
+  background-color: #DBDBDB;
 }
 
 @import "bootstrap/scss/bootstrap.scss";
