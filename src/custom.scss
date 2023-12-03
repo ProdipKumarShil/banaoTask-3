@@ -3,6 +3,16 @@ $secondary: #FCE38A;
 $success: #EAFFD0;
 $warning: #95E1D3; // background color
 
+.img-sizing {
+  width: 80px;
+  height: 80px
+}
+p{
+  margin-bottom: 0 !important;
+}
+.text-24{
+  font-size: 24px;
+}
 
 @import "bootstrap/scss/bootstrap.scss";
 
