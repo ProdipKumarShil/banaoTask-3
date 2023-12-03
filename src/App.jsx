@@ -6,6 +6,7 @@ import axios from "axios";
 import UserList from "./components/UserList/UserList";
 import UserDetails from "./components/UserDetails/UserDetails";
 import CardPlaceholder from "./components/CardPlaceholder/CardPlaceholder";
+import { motion } from "framer-motion";
 
 function App() {
   const [users, setUser] = useState([]);
@@ -67,11 +68,11 @@ export default App;
 
 const Loading = () => {
   return (
-    <div style={{ color: "#acacac" }} className="border p-3 rounded-3 mx-3">
+    <motion.div initial={{scale: 0, }} animate={{scale: 1}} transition={{delay: 0.5, type: "spring"}} style={{ color: "#acacac" }} className="border p-3 rounded-3 mx-3">
       <p className="display-6 text-center ">User Not Found</p>
       <p className="text-center">
         or <br /> select one to more details
       </p>
-    </div>
+    </motion.div>
   );
 };

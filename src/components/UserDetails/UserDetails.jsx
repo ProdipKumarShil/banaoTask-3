@@ -1,18 +1,19 @@
 import moment from "moment/moment";
 import bg from "../../assets/bg.svg";
 import ProfileData from "../ProfileData/ProfileData";
+import { motion } from "framer-motion";
 const UserDetails = ({ card }) => {
   if (!card?.avatar && !card?.profile?.firstName) {
     return (
-      <div className="d-flex mx-3 justify-content-center mt-4">
+      <motion.div  className="d-flex mx-3 justify-content-center mt-4">
         <div className="spinner-border" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
-      </div>
+      </motion.div>
     );
   } else {
     return (
-      <div className=" mx-3 border overflow-hidden rounded-3 position-sticky top-0">
+      <motion.div initial={{scale: 0, }} animate={{scale: 1}} transition={{delay: 0.5, type: "spring"}} className=" mx-3 border overflow-hidden rounded-3 position-sticky top-0">
         <div className="position-relative">
           <img
             className="bg-img-height w-screen object-fit-cover"
@@ -40,7 +41,7 @@ const UserDetails = ({ card }) => {
           <ProfileData title={"Title"} data={card?.jobTitle} />
           <ProfileData title={"Email"} data={card?.profile?.email} />
         </div>
-      </div>
+      </motion.div>
     );
   }
 };
